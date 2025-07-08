@@ -6,7 +6,10 @@ $db = "pbwakhir";
 
 $conn = mysqli_connect($host, $user, $password, $db);
 
+// Tampilkan error jika koneksi gagal
 if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+    echo "Koneksi gagal: " . mysqli_connect_error();
+    exit();
 }
 ?>
+
