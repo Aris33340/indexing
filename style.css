@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #000;
+}
+
+.logo-link {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara logo dan teks */
+}
+
+.logo-img {
+    height: 50px; /* Sesuaikan ukuran logo */
+    width: auto; /* Menjaga proporsi */
+}
+
+.logo span {
+    font-size: 1.2em; /* Sesuaikan ukuran teks */
+    font-weight: bold; /* Sesuaikan gaya teks */
+}
+
+/* Responsivitas untuk perangkat mobile */
+@media (max-width: 600px) {
+    .logo-img {
+        height: 30px; /* Ukuran lebih kecil untuk mobile */
+    }
+    .logo span {
+        font-size: 1em; /* Teks lebih kecil */
+    }
+}
+/*.nav a{
+  color: white;
+  margin: 0 10px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  display: inline-block;
+}*/
+.nav .execpt-signup{
+  color: white;
+  margin: 0 10px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.nav .execpt-signup:hover{
+  
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #4AE7F3 0%, #DA6CFF 100%);
+  transition: all 0.3s ease;
+  border: none; 
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(39, 100, 255, 0.6), 0 0 40px rgba(138, 43, 226, 0.4);
+}
+/*nav a:hover{
+  
+  background: linear-gradient(90deg, #4AE7F3 0%, #DA6CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  background-clip: text; /* untuk sebagian browser modern */
+ /*text-fill-color: transparent; 
+} */
+
+.nav .signup-btn{
+  color: black;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #4AE7F3 0%, #DA6CFF 100%);
+  transition: all 0.3s ease;
+  border: none; 
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav .signup-btn:hover{
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  background-clip: text; /* untuk sebagian browser modern */
+  text-fill-color: transparent; 
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(39, 100, 255, 0.6), 0 0 40px rgba(138, 43, 226, 0.4);
+}
+
+
+
+
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 60px; 
+  background: #000;
+}
+
+.hero-content {
+   position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+.particles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.particles::before, .particles::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(112,0,255,0.4), transparent);
+  filter: blur(100px);
+  animation: float 12s infinite ease-in-out;
+}
+
+.particles::after {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,150,255,0.4), transparent);
+  top: 30%;
+  left: 60%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #4AE7F3 0%, #DA6CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 80px;
+}
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  max-width: 600px;
+  margin: 20px auto;
+  margin-bottom: 80px;
+}
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #4AE7F3 0%, #DA6CFF 100%);
+  color: #000;
+  text-decoration: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 24px;
+  font-weight:bold;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(39, 100, 255, 0.6), 0 0 40px rgba(138, 43, 226, 0.4);
+}
+/* FITUR UTAMA */
+.fitur-title {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 60px;
+  background: linear-gradient(90deg, #4AE7F3, #DA6CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fitur {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+
+.fitur-box {
+  background-color: #191919;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.fitur-box h3 {
+  font-size: 20px;
+  background: linear-gradient(90deg, #74C3FF, #E4B1FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fitur-box p {
+  font-size: 14px;
+  color: #ccc;
+  text-align: justify;
+}
+
+/* INSTRUMEN */
+.instrumen-title {
+  text-align: center;
+  font-size: 28px;
+  background:  linear-gradient(90deg, #4AE7F3, #DA6CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.instrumen {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px;
+  
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+}
+.instrumen-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 2px solid #4ae7f3;
+  border-radius: 12px;
+  background-color: transparent;
+  padding: 20px;
+  width: 220px;
+}
+.instrumen-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(74, 231, 243, 0.5);
+}
+.judul{
+  margin-bottom: 15px;
+  color: #a694f9;
+}
+.instrumen-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+/* TENTANG KAMI */
+.tentang-kami {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 80px 20px;
+}
+
+.judul-tentang {
+  font-size: 48px;
+  background: linear-gradient(90deg, #4AE7F3, #DA6CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+.deskripsi-tentang {
+  font-size: 20px;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+.tentang-kami p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+  color: #ddd;
+}
+.kontak {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+.kontak-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+.kontak-item img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.kontak-item img {
+  width: 80px;
+}
+
+/*.kontak span {
+  display: inline-block;
+  margin: 10px 0;
+  color: #999;
+}*/
+h3{
+  background:  linear-gradient(90deg, #4AE7F3, #DA6CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #000;
+  color: #555;
+}
+/* crypto, saham, obligasi */
+.content {
+  padding: 40px;
+  color: #fff;
+  background-color: #111;
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.content table th, td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4ae7f3;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.card {
+    background: linear-gradient(145deg, #1a1a1a, #111);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(74, 231, 243, 0.5);
+}
+
+
+.detail-btn, .refresh-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4ae7f3;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.detail-btn:hover, .refresh-btn:hover {
+  background: #37cde0;
+  transform: scale(1.05);
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.tabs button {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.tabs button:hover {
+    background: #4AE7F3;
+    color: #000;
+}
+
+table {
+    background-color: #111;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+table th {
+    background: linear-gradient(90deg, #4AE7F3, #DA6CFF);
+    color: #000;
+    padding: 15px;
+}
+
+table td {
+    color: #fff;
+    padding: 15px;
+}
