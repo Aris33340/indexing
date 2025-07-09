@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$password = "";
-$db = "pbwakhir"; // Ganti sesuai database kamu
+$user = "projec15_root";
+$password = "@kaesquare123";
+$db = "projec15_pbwakhir"; // Ganti sesuai database kamu
 
 $conn = mysqli_connect($host, $user, $password, $db);
 
