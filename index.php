@@ -57,22 +57,22 @@
 
   <h2 class="instrumen-title" id="instrumen">Instrumen</h2>
   <section class="instrumen">
-  <a href="dashboard.php" class="instrumen-item">
+  <a href="login.php" class="instrumen-item">
     <h3 class="judul">Crypto</h3>
     <img src="img/btc-min.png" alt="Crypto" />
-    <span class="detail-btn">Lihat Detail Crypto</span>
+    <span class="detail-btn">Lihat Detail</span>
   </a>
 
-  <a href="dashboard.php" class="instrumen-item">
+  <a href="login.php" class="instrumen-item">
     <h3 class="judul">Indeks Pasar</h3>
     <img src="img/obligasi-min.png" alt="Indeks Pasar" />
-    <span class="detail-btn">Lihat Detail Indeks Pasar</span>
+    <span class="detail-btn">Lihat Detail</span>
   </a>
 
-  <a href="dashboard.php" class="instrumen-item">
+  <a href="login.php" class="instrumen-item">
     <h3 class="judul">Saham</h3>
     <img src="img/saham-min.png" alt="Saham" />
-    <span class="detail-btn">Lihat Detail Saham</span>
+    <span class="detail-btn">Lihat Detail</span>
   </a>
   </section>
 
