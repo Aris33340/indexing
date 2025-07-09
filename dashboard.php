@@ -97,6 +97,10 @@
   </div>
 
   <div class="content">
+    <div style="margin-top: 20px;">
+      <input type="text" id="searchInput" placeholder="Cari aset..." 
+             style="padding: 10px; width: 100%; background: #1a1a1a; color: white; border: 1px solid #444; border-radius: 5px;">
+    </div>
     <div id="errorMessage" class="error"></div>
     <table id="dataTable">
       <thead>
@@ -144,6 +148,8 @@
       document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
       if (event) event.target.classList.add('active');
       document.getElementById('errorMessage').innerHTML = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('searchInput').focus();
 
       const headerRow = document.getElementById('tableHeader');
       const body = document.getElementById('tableBody');
@@ -239,6 +245,21 @@
     function logout() {
       window.location.href = 'logout.php';
     }
+
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      const rows = document.querySelectorAll('#tableBody tr');
+      rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        let match = false;
+        cells.forEach(cell => {
+          if (cell.textContent.toLowerCase().includes(filter)) {
+            match = true;
+          }
+        });
+        row.style.display = match ? '' : 'none';
+      });
+    });
 
     loadIndexes();
     loadData('kripto');
