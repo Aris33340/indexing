@@ -1,14 +1,21 @@
 <?php
+session_start();
 include 'koneksi.php';
 
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
 $asets = [];
-$sql = "SELECT * FROM aset_portofolio";
+$sql = "SELECT * FROM aset_portofolio WHERE user_id = $user_id";
 $result = mysqli_query($conn, $sql);
 
 while ($row = mysqli_fetch_assoc($result)) {
     $asets[] = $row;
 }
-
 // Pisahkan kripto dan non-kripto
 $crypto_ids = [];
 $non_crypto = [];
