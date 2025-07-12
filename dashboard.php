@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION['email'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Penting: ambil user_id dari session agar aksi portofolio tersambung
+$user_id = $_SESSION['user_id'];
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
