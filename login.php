@@ -1,11 +1,6 @@
 <?php
-// Tampilkan semua error untuk debugging
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 session_start();
-include 'koneksi.php'; // koneksi database
+include 'koneksi.php';
 
 $error = "";
 
@@ -16,11 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM users WHERE email='$email'";
     $result = mysqli_query($conn, $query);
 
-    if ($result && mysqli_num_rows($result) == 1) {
+    if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
-
         if (password_verify($pass, $row['password'])) {
             $_SESSION['email'] = $email;
+            $_SESSION['user_id'] = $row['id'];
             header("Location: dashboard.php");
             exit();
         } else {
